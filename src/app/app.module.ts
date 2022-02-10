@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TipoCambioComponent} from './pages/tipo-cambio/tipo-cambio.component';
+import {MaterialModulo} from './_material/material.modulo';
+import {HttpClientModule} from '@angular/common/http';
+import {TipoCambioEdicionComponent} from './pages/tipo-cambio/tipo-cambio-edicion/tipo-cambio-edicion.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TipoCambioComponent,
+    TipoCambioEdicionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    MaterialModulo,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
